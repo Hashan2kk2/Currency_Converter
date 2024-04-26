@@ -1,9 +1,12 @@
-import {useState, useEffect, useRef} from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 function CurrencyDropDown() {
+    const [searchTerm, setSearchTerm] = useState('');
     const [isOpen, setIsOpen] = useState(false);
     const [currencies, setCurrencies] = useState([]);
     const dropdownRef = useRef(null);
+    const [selectedCurrency, setSelectedCurrency] = useState('Select the Currency');
+
 
     useEffect(() => {
         fetch("src/Components/Assets/Currencies.json")
@@ -29,14 +32,14 @@ function CurrencyDropDown() {
     }, []);
 
     return (
-        <div className="relative inline-block text-center w-full px-3" ref={dropdownRef}>
+        <div className="relative inline-block justify-center text-center w-full px-3" ref={dropdownRef}>
             <div>
                 <button type="button" onClick={() => setIsOpen(!isOpen)}
-                        className="h-[38px] text-center outline-0 block w-full rounded-md border-0 py-1.5 px-3 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-neutral-500 sm:text-sm sm:leading-6">
-                    Select the Currency
+                    className="h-[38px] text-center outline-0 block w-full rounded-md border-0 py-1.5 px-3 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-neutral-500 sm:text-sm sm:leading-6">
+                    {selectedCurrency}
                 </button>
             </div>
-
+    
             {isOpen && (
                 <div className="origin-top-right absolute left-1/2 transform -translate-x-1/2 mt-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 w-[300px] z-10">
                     <input
@@ -47,11 +50,9 @@ function CurrencyDropDown() {
                         className="w-full px-2 py-1 border-0 ring-2 focus:ring-2 ring-neutral-600 ring-inset rounded-sm focus:ring-neutral-500 focus:ring-inset focus:ring-opacity-50 focus:outline-none"
                     />
                     <div className="py-1 h-[300px] overflow-y-auto" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
-
-                        {currencies.map((currency, index) => {
-                            return <div key={index} className="active:bg-blue-700 hover:bg-blue-800 text-center py-1">{currency.code}</div>
+                        {currencies.filter(currency => currency.code.toLowerCase().includes(searchTerm.toLowerCase())).map((currency, index) => {
+                            return <div key={index} className="active:bg-blue-700 hover:bg-blue-800 text-center py-1" onClick={() => {setSelectedCurrency(currency.code); setIsOpen(false);}}>{currency.code}</div>
                         })}
-
                     </div>
                 </div>
             )}
