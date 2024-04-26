@@ -1,0 +1,18 @@
+
+:root{
+    --neutral-950 : #0a0a0a;
+    --neutral-50 : #fafafa;
+    --neutral-500 : #737373;
+}
+
+.theme-switch{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
