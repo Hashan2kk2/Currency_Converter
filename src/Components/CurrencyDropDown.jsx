@@ -38,8 +38,14 @@ function CurrencyDropDown() {
             </div>
 
             {isOpen && (
-                <div
-                    className="origin-top-right absolute right-0 mt-2  rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 w-[300px] z-10">
+                <div className="origin-top-right absolute left-1/2 transform -translate-x-1/2 mt-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 w-[300px] z-10">
+                    <input
+                        type="text"
+                        placeholder="Search..."
+                        value={searchTerm}
+                        onChange={e => setSearchTerm(e.target.value)}
+                        className="w-full px-2 py-1 border-0 ring-2 focus:ring-2 ring-neutral-600 ring-inset rounded-sm focus:ring-neutral-500 focus:ring-inset focus:ring-opacity-50 focus:outline-none"
+                    />
                     <div className="py-1 h-[300px] overflow-y-auto" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
 
                         {currencies.map((currency, index) => {
