@@ -29,7 +29,6 @@ This is a simple currency converter application built using React. The applicati
    git clone https://github.com/Hashan2kk2/Currency_Converter.git
    cd Currency_Converter
 
-
 2. Install the dependencies:
 
    ```sh
