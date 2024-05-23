@@ -27,7 +27,7 @@ This is a simple currency converter application built using React. The applicati
 
    ```sh
    git clone https://github.com/Hashan2kk2/Currency-Converter-React.git
-   cd currency-converter
+   cd Currency-Converter-React
 
 
 2. Install the dependencies:
@@ -45,7 +45,7 @@ This is a simple currency converter application built using React. The applicati
 1. Start the development server:
 
    ```sh
-   npm start
+   npm run dev
    
 2. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 3. Enter the amount you want to convert and select the base and target currencies.
