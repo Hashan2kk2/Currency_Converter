@@ -46,8 +46,7 @@ This is a simple currency converter application built using React. The applicati
    ```sh
    npm run dev
    
-2. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-3. Enter the amount you want to convert and select the base and target currencies.
+2. Enter the amount you want to convert and select the base and target currencies.
 
 ## 🧩 Components
 
