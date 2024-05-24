@@ -36,7 +36,7 @@ This is a simple currency converter application built using React. The applicati
 
 3. Create a .env file in the root directory and add your Open Exchange Rates API key:
 
-   ```sh
+   ```html
    REACT_APP_API_KEY=your_api_key_here
 
 ## 🚀 Usage
