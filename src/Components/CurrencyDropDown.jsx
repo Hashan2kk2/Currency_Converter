@@ -8,7 +8,7 @@ function CurrencyDropDown({ exchangeRates, setSelectedCurrency }) {
     const [selectedCurrency, setSelectedCurrencyState] = useState('Select the Currency');
 
     useEffect(() => {
-        fetch("src/Components/Assets/Currencies.json")
+        fetch("public/currencies.json")
             .then(response => response.json())
             .then(data => {
                 const dataArray = Object.values(data);
