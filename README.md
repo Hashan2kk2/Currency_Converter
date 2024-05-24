@@ -60,7 +60,7 @@ This is a simple currency converter application built using React. The applicati
 
 -  This is the main component of the application. It handles the state for the input amount, converted amount, exchange rates, and selected currencies.
 
-```// src/Components/Converter.jsx
+```jsx
 import { useState, useEffect } from 'react';
 import "../Components/Css/Converter.css";
 import "../Components/Css/Fonts.css";
@@ -142,7 +142,7 @@ export default Converter;
 
 - This component is used to render a dropdown list of currencies.
 
-```// src/Components/CurrencyDropDown.jsx
+```jsx
 import { useState, useEffect, useRef } from 'react';
 
 function CurrencyDropDown({ exchangeRates, setSelectedCurrency }) {
@@ -223,7 +223,7 @@ export default CurrencyDropDown;
 - **.env**: A file that contains environment variables for the application.
 
 `exchangeRateService.jsx`
-```angular2html
+```jsx
 // services/exchangeRateService.js
 import axios from 'axios';
 
