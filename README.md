@@ -241,7 +241,7 @@ export const getExchangeRates = async () => {
 ```
 
 ## Screenshots
-![image](https://github.com/user-attachments/assets/c77f27f5-80a2-49fe-89c5-fde653f8ea77)
+![image](https://github.com/user-attachments/assets/6028bc77-992e-4469-908c-055b9d8ba8f7)
 ![image](https://github.com/user-attachments/assets/148b7b0d-6719-4712-9a82-84f51372cc07)
 ![image](https://github.com/user-attachments/assets/970372a6-0564-4b3b-b1c4-e357e662c683)
 ![image](https://github.com/user-attachments/assets/d6182d73-fd63-4f92-b554-8ef5c59e00ba)
